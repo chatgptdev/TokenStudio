@@ -17,23 +17,23 @@
     :root {
       color-scheme: dark;
       --bg: #020617;
-      --bg-elevated: #020617;
-      --bg-elevated-soft: #020617;
-      --bg-input: #020617;
-      --border-subtle: rgba(148, 163, 184, 0.45);
-      --border-strong: rgba(148, 163, 184, 0.75);
+      --bg-elevated: #0f172a;
+      --bg-elevated-soft: #1e293b;
+      --bg-input: #0f172a;
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --border-strong: rgba(148, 163, 184, 0.5);
       --accent: #22c55e;
       --accent-soft: rgba(34, 197, 94, 0.2);
-      --accent-strong: #22c55e;
-      --text-main: #e5e7eb;
-      --text-soft: #9ca3af;
-      --text-softer: #6b7280;
-      --danger: #f97373;
+      --accent-strong: #4ade80;
+      --text-main: #f1f5f9;
+      --text-soft: #94a3b8;
+      --text-softer: #64748b;
+      --danger: #f87171;
       --radius-lg: 16px;
       --radius-md: 10px;
       --radius-sm: 6px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.65);
-      --shadow-subtle: 0 1px 2px rgba(15, 23, 42, 0.7);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.4);
+      --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.3);
       --transition-fast: 140ms ease-out;
     }
 
@@ -46,8 +46,8 @@
       min-height: 100vh;
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background:
-        radial-gradient(circle at top, rgba(34,197,94,0.18), transparent 55%),
-        radial-gradient(circle at bottom, rgba(56,189,248,0.12), transparent 55%),
+        radial-gradient(circle at top, rgba(34,197,94,0.12), transparent 55%),
+        radial-gradient(circle at bottom, rgba(56,189,248,0.08), transparent 55%),
         #020617;
       color: var(--text-main);
       display: flex;
@@ -61,13 +61,13 @@
       margin: auto;
       background: linear-gradient(
         145deg,
-        rgba(15, 23, 42, 0.94),
+        rgba(15, 23, 42, 0.95),
         rgba(15, 23, 42, 0.98)
       );
       border-radius: 24px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
+      border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
-      padding: 22px 22px 18px;
+      padding: 24px;
       backdrop-filter: blur(28px);
     }
 
@@ -76,37 +76,37 @@
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .brand-badge {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #bbf7d0, #22c55e);
+      background: linear-gradient(135deg, #4ade80, #22c55e);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #022c22;
       font-weight: 800;
-      font-size: 17px;
+      font-size: 18px;
       box-shadow:
-        0 0 0 1px rgba(22, 163, 74, 0.8),
-        0 10px 20px rgba(22, 163, 74, 0.4);
+        0 0 0 2px rgba(34, 197, 94, 0.3),
+        0 8px 20px rgba(34, 197, 94, 0.3);
     }
 
     .brand-text h1 {
       font-size: 18px;
       margin: 0;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #e5e7eb;
+      letter-spacing: 0.02em;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -117,114 +117,107 @@
       height: 6px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.25);
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
     }
 
     .brand-text p {
       margin: 0;
       margin-top: 2px;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-soft);
     }
 
     .header-right {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 11px;
-      color: var(--text-soft);
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .pill {
-      padding: 4px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
+      border: 1px solid var(--border-subtle);
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.3), rgba(15, 23, 42, 0.8));
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 12px;
+      color: var(--text-soft);
     }
 
     .pill strong {
-      font-size: 11px;
-      color: #e5e7eb;
+      color: var(--text-main);
+    }
+
+    .pill .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
     }
 
     .layout {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     @media (max-width: 900px) {
       .app {
-        padding: 16px 14px 14px;
+        padding: 16px;
         border-radius: 18px;
       }
       .layout {
         grid-template-columns: minmax(0, 1fr);
       }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     .section-card {
-      background: radial-gradient(circle at top left, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      background: var(--bg-elevated);
       border-radius: var(--radius-lg);
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 18px;
+      border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-subtle);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.11), transparent 55%);
-      opacity: 0.85;
-      pointer-events: none;
-      mix-blend-mode: screen;
-    }
-
-    .section-card-inner {
-      position: relative;
-      z-index: 1;
     }
 
     .section-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      gap: 12px;
     }
 
     .section-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #cbd5f5;
+      letter-spacing: 0.02em;
+      color: var(--text-main);
     }
 
     .section-subtitle {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-soft);
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
     .badge {
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-soft);
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: var(--accent-strong);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(34, 197, 94, 0.1);
     }
 
     .badge-dot {
@@ -232,24 +225,22 @@
       height: 6px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
     }
 
     textarea {
       width: 100%;
-      min-height: 260px;
-      max-height: 480px;
+      min-height: 280px;
+      max-height: 500px;
       resize: vertical;
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
+      background: var(--bg);
       border-radius: 12px;
       border: 1px solid var(--border-subtle);
       color: var(--text-main);
-      font: 400 13px/1.55 "Inter", system-ui, sans-serif;
-      padding: 10px 11px;
+      font: 400 13px/1.6 "Inter", system-ui, sans-serif;
+      padding: 12px 14px;
       outline: none;
       caret-color: var(--accent);
-      box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 1);
-      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background 160ms ease-out;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     }
 
     textarea::placeholder {
@@ -257,21 +248,19 @@
     }
 
     textarea:focus-visible {
-      border-color: rgba(34, 197, 94, 0.6);
-      box-shadow:
-        0 0 0 1px rgba(34, 197, 94, 0.7),
-        0 0 0 8px rgba(34, 197, 94, 0.09);
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.94), rgba(15, 23, 42, 1));
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
     }
 
     .input-toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
-      gap: 10px;
-      font-size: 11px;
+      margin-bottom: 10px;
+      gap: 12px;
+      font-size: 12px;
       color: var(--text-soft);
+      flex-wrap: wrap;
     }
 
     .input-toolbar-left {
@@ -284,8 +273,7 @@
       width: 4px;
       height: 4px;
       border-radius: 999px;
-      background: rgba(148, 163, 184, 0.8);
-      opacity: 0.8;
+      background: var(--text-softer);
     }
 
     .input-toolbar-right {
@@ -295,84 +283,75 @@
     }
 
     .btn {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.65);
-      background: rgba(15, 23, 42, 0.9);
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-elevated-soft);
       color: var(--text-main);
-      font-size: 11px;
-      padding: 4px 10px;
+      font-size: 12px;
+      padding: 6px 12px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       cursor: pointer;
-      box-shadow: 0 1px 1px rgba(15, 23, 42, 0.8);
-      transition: background var(--transition-fast), border-color var(--transition-fast), transform 80ms ease-out, box-shadow 80ms ease-out, color var(--transition-fast);
+      transition: all var(--transition-fast);
       white-space: nowrap;
     }
 
     .btn span.icon {
-      opacity: 0.9;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     .btn:hover {
-      background: radial-gradient(circle at 20% 0, rgba(34, 197, 94, 0.12), rgba(15, 23, 42, 0.98));
-      border-color: rgba(248, 250, 252, 0.85);
-      transform: translateY(-0.5px);
-      box-shadow:
-        0 3px 10px rgba(15, 23, 42, 0.9),
-        0 0 0 1px rgba(148, 163, 184, 0.6);
+      background: var(--bg-elevated);
+      border-color: var(--text-soft);
+      transform: translateY(-1px);
     }
 
     .btn:active {
-      transform: translateY(0.5px) scale(0.99);
-      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.7);
+      transform: translateY(0);
     }
 
     .btn-ghost {
       background: transparent;
       border-style: dashed;
-      border-color: rgba(148, 163, 184, 0.7);
       color: var(--text-soft);
-      box-shadow: none;
     }
 
     .btn-ghost:hover {
+      background: var(--bg-elevated-soft);
       border-style: solid;
-      background: rgba(15, 23, 42, 0.9);
       color: var(--text-main);
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.9);
     }
 
     .hint {
-      margin-top: 6px;
-      font-size: 10px;
+      margin-top: 10px;
+      font-size: 11px;
       color: var(--text-soft);
       display: flex;
       justify-content: space-between;
-      gap: 8px;
+      gap: 12px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .hint code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 10px;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 2px 6px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #e5e7eb;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
     }
 
+    /* Main stats card - FIXED CONTRAST */
     .stats-main-card {
-      background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.22), rgba(15, 23, 42, 0.98));
+      background: linear-gradient(135deg, #166534 0%, #15803d 50%, #16a34a 100%);
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(34, 197, 94, 0.7);
-      padding: 10px 11px 8px;
-      margin-bottom: 10px;
-      box-shadow:
-        0 0 0 1px rgba(15, 23, 42, 0.8),
-        0 16px 30px rgba(22, 163, 74, 0.45);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 32px rgba(22, 163, 74, 0.25);
       position: relative;
       overflow: hidden;
     }
@@ -380,12 +359,11 @@
     .stats-main-card::before {
       content: "";
       position: absolute;
-      inset: -40%;
-      background:
-        radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.1), transparent 45%),
-        radial-gradient(circle at 100% 0, rgba(34, 197, 94, 0.5), transparent 50%);
-      opacity: 0.7;
-      mix-blend-mode: screen;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 60%);
       pointer-events: none;
     }
 
@@ -398,66 +376,64 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 10px;
+      gap: 16px;
     }
 
     .model-select-group {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
     }
 
     .label-small {
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
-      color: rgba(15, 23, 42, 0.92);
-      opacity: 0.9;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
     }
 
     .model-select-wrapper {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 0;
     }
 
     select {
       appearance: none;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.85);
-      padding: 4px 23px 4px 9px;
-      font-size: 11px;
-      background:
-        radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.95));
-      color: #ecfeff;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 32px 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      background: rgba(0, 0, 0, 0.25);
+      color: #ffffff;
       outline: none;
       cursor: pointer;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.9);
-      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background 120ms ease-out, transform 80ms ease-out;
+      transition: all var(--transition-fast);
     }
 
     select:hover {
-      border-color: rgba(22, 163, 74, 0.8);
-      box-shadow:
-        0 0 0 1px rgba(22, 163, 74, 0.8),
-        0 5px 16px rgba(15, 23, 42, 0.9);
-      transform: translateY(-0.5px);
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.35);
     }
 
     select:focus-visible {
-      border-color: rgba(15, 23, 42, 0.9);
-      box-shadow:
-        0 0 0 1px rgba(15, 23, 42, 0.9),
-        0 0 0 7px rgba(190, 242, 100, 0.7);
-      background: rgba(15, 23, 42, 1);
+      border-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+    }
+
+    select option {
+      background: #166534;
+      color: #ffffff;
     }
 
     .select-chevron {
       position: relative;
-      right: 18px;
+      right: 24px;
       pointer-events: none;
-      font-size: 11px;
-      color: rgba(226, 232, 240, 0.8);
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
     }
 
     .primary-metric {
@@ -465,93 +441,91 @@
     }
 
     .primary-metric-label {
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: rgba(15, 23, 42, 0.92);
-      opacity: 0.9;
-      margin-bottom: 2px;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 500;
+      margin-bottom: 4px;
     }
 
     .primary-metric-value {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #ecfeff;
-      text-shadow: 0 1px 0 rgba(15, 23, 42, 0.9);
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      line-height: 1;
     }
 
     .primary-metric-sub {
-      font-size: 10px;
-      color: rgba(15, 23, 42, 0.85);
-      margin-top: 2px;
-      opacity: 0.95;
-    }
-
-    .primary-metric-sub strong {
-      font-weight: 600;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-top: 6px;
     }
 
     .stats-main-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 6px;
-      gap: 10px;
-      font-size: 11px;
-      color: rgba(15, 23, 42, 0.92);
+      margin-top: 14px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .stat-chip-row {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
     .stat-chip {
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.8);
-      padding: 2px 7px 2px 5px;
-      background: rgba(15, 23, 42, 0.13);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 4px 10px;
+      background: rgba(0, 0, 0, 0.2);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
     .stat-chip-key {
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.9;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .stat-chip-value {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 600;
+      color: #ffffff;
     }
 
     .hint-soft {
-      font-size: 10px;
-      color: rgba(15, 23, 42, 0.8);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.7);
       text-align: right;
-      opacity: 0.9;
+      max-width: 280px;
+    }
+
+    .hint-soft strong {
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .stats-grid {
       display: grid;
-      grid-template-rows: auto 1.1fr;
-      gap: 10px;
-      max-height: 360px;
+      grid-template-rows: auto 1fr;
+      gap: 14px;
     }
 
     .encoding-card,
     .tokens-card {
-      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 1));
+      background: var(--bg);
       border-radius: var(--radius-md);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 8px 9px 8px;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.9);
-      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      padding: 14px;
+      box-shadow: var(--shadow-subtle);
     }
 
     .encoding-card-header,
@@ -559,57 +533,64 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 6px;
-      font-size: 11px;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
     .encoding-card-header-title,
     .tokens-card-header-title {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.06em;
       color: var(--text-soft);
       font-weight: 500;
     }
 
     .small-pill {
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      padding: 1px 7px;
-      font-size: 10px;
+      border: 1px solid var(--border-subtle);
+      padding: 3px 10px;
+      font-size: 11px;
       color: var(--text-soft);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      background: rgba(15, 23, 42, 0.9);
+      gap: 6px;
+      background: var(--bg-elevated);
+    }
+
+    .small-pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     thead {
-      border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     th, td {
-      padding: 5px 4px;
+      padding: 8px 6px;
       text-align: left;
     }
 
     th {
       font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.13em;
-      color: var(--text-soft);
+      letter-spacing: 0.08em;
+      color: var(--text-softer);
       font-weight: 500;
       white-space: nowrap;
     }
 
     tbody tr {
-      border-bottom: 1px solid rgba(30, 41, 59, 0.7);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
     }
 
     tbody tr:last-child {
@@ -617,7 +598,7 @@
     }
 
     tbody tr:hover {
-      background: rgba(15, 23, 42, 0.9);
+      background: var(--bg-elevated);
     }
 
     td {
@@ -626,173 +607,156 @@
 
     td.encoding-name-cell {
       font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .encoding-tag {
-      font-size: 10px;
-      color: var(--text-soft);
-      padding: 1px 6px;
-      border-radius: 999px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .encoding-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
     }
 
     .encoding-models {
-      font-size: 10px;
+      font-size: 11px;
       color: var(--text-soft);
+      margin-top: 2px;
     }
 
     .token-count-cell {
       text-align: right;
       font-variant-numeric: tabular-nums;
-      font-feature-settings: "tnum" 1;
+      font-weight: 500;
     }
 
     .token-count-cell.primary {
       color: var(--accent-strong);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .status-pill {
       font-size: 10px;
       border-radius: 999px;
-      padding: 1px 6px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 2px 8px;
+      border: 1px solid var(--border-subtle);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
+      background: var(--bg-elevated);
     }
 
     .status-pill.ok {
-      border-color: rgba(34, 197, 94, 0.8);
-      color: rgba(74, 222, 128, 0.95);
+      border-color: rgba(34, 197, 94, 0.4);
+      color: var(--accent-strong);
+      background: rgba(34, 197, 94, 0.1);
     }
 
     .status-pill.error {
-      border-color: rgba(248, 113, 113, 0.85);
-      color: rgba(252, 165, 165, 0.95);
+      border-color: rgba(248, 113, 113, 0.4);
+      color: var(--danger);
+      background: rgba(248, 113, 113, 0.1);
     }
 
     .status-dot {
       width: 6px;
       height: 6px;
       border-radius: 999px;
-      background: rgba(75, 85, 99, 0.85);
+      background: var(--text-softer);
     }
 
     .status-dot.ok {
-      background: rgba(34, 197, 94, 0.95);
+      background: var(--accent);
     }
 
     .status-dot.error {
-      background: rgba(239, 68, 68, 0.95);
+      background: var(--danger);
     }
 
     .encoding-muted {
-      opacity: 0.65;
+      opacity: 0.5;
     }
 
     .tokens-body {
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 1));
-      border-radius: 9px;
-      border: 1px solid rgba(55, 65, 81, 0.85);
-      padding: 6px 6px 4px;
-      max-height: 212px;
+      background: var(--bg-elevated);
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      padding: 10px;
+      max-height: 220px;
       overflow: auto;
       scrollbar-width: thin;
-      scrollbar-color: rgba(148, 163, 184, 0.7) rgba(15, 23, 42, 0.95);
+      scrollbar-color: var(--text-softer) var(--bg);
     }
 
     .tokens-body::-webkit-scrollbar {
-      width: 7px;
+      width: 8px;
     }
 
     .tokens-body::-webkit-scrollbar-track {
-      background: rgba(15, 23, 42, 0.9);
+      background: var(--bg);
+      border-radius: 4px;
     }
 
     .tokens-body::-webkit-scrollbar-thumb {
-      background: rgba(148, 163, 184, 0.8);
-      border-radius: 999px;
+      background: var(--text-softer);
+      border-radius: 4px;
     }
 
     .token-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 6px;
     }
 
     .token-chip {
       border-radius: 6px;
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      background: rgba(15, 23, 42, 0.98);
-      padding: 3px 6px;
-      font-size: 10px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg);
+      padding: 6px 8px;
+      font-size: 11px;
       color: var(--text-main);
-      box-shadow: 0 1px 1px rgba(15, 23, 42, 0.9);
+      box-shadow: var(--shadow-subtle);
       max-width: 100%;
     }
 
     .token-text {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
       white-space: pre-wrap;
       word-wrap: break-word;
-      color: #e5e7eb;
-      margin-bottom: 2px;
+      color: var(--text-main);
+      margin-bottom: 4px;
     }
 
     .token-meta {
       display: flex;
       justify-content: space-between;
-      gap: 4px;
+      gap: 8px;
       font-size: 9px;
-      color: var(--text-soft);
+      color: var(--text-softer);
     }
 
-    .token-index {
-      font-variant-numeric: tabular-nums;
-      font-feature-settings: "tnum" 1;
-    }
-
+    .token-index,
     .token-id {
       font-variant-numeric: tabular-nums;
-      font-feature-settings: "tnum" 1;
     }
 
     .muted {
       color: var(--text-soft);
-      font-size: 10px;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     .muted-strong {
-      color: #e5e7eb;
-      opacity: 0.9;
+      color: var(--text-main);
     }
 
     footer {
-      margin-top: 10px;
-      font-size: 10px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 11px;
       color: var(--text-soft);
       display: flex;
       justify-content: space-between;
-      gap: 8px;
+      gap: 12px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     footer a {
-      color: var(--accent);
+      color: var(--accent-strong);
       text-decoration: none;
     }
 
@@ -805,9 +769,9 @@
     }
 
     .message {
-      font-size: 10px;
-      margin-top: 4px;
-      color: var(--text-soft);
+      font-size: 11px;
+      margin-top: 8px;
+      color: var(--accent-strong);
     }
   </style>
 </head>
@@ -826,12 +790,13 @@
       </div>
       <div class="header-right">
         <div class="pill">
-          <span style="width:6px;height:6px;border-radius:999px;background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,0.35);"></span>
+          <span class="status-indicator"></span>
           <strong>On‑device</strong>
-          <span>no prompt upload</span>
+          <span>— no prompt upload</span>
         </div>
         <div class="pill">
-          <span>Tokenizer</span><strong>js‑tiktoken</strong>
+          <span>Tokenizer:</span>
+          <strong>js‑tiktoken</strong>
         </div>
       </div>
     </header>
@@ -839,141 +804,124 @@
     <main class="layout">
       <!-- Left: Input -->
       <section class="section-card">
-        <div class="section-card-inner">
-          <div class="section-header">
-            <div>
-              <div class="section-title">Prompt input</div>
-              <div class="section-subtitle">
-                Paste or type the content you plan to send to the model.
-              </div>
-            </div>
-            <div class="badge">
-              <span class="badge-dot"></span>
-              <span>Live tokenization</span>
+        <div class="section-header">
+          <div>
+            <div class="section-title">Prompt Input</div>
+            <div class="section-subtitle">
+              Paste or type the content you plan to send to the model.
             </div>
           </div>
-
-          <div class="input-toolbar">
-            <div class="input-toolbar-left">
-              <span>Raw text only</span>
-              <span class="separator-dot"></span>
-              <span>Chat wrappers not included</span>
-            </div>
-            <div class="input-toolbar-right">
-              <button class="btn" id="pasteBtn" type="button">
-                <span class="icon">📋</span>
-                <span>Paste</span>
-              </button>
-              <button class="btn btn-ghost" id="clearBtn" type="button">
-                <span class="icon">✕</span>
-                <span>Clear</span>
-              </button>
-            </div>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Live tokenization</span>
           </div>
-
-          <textarea
-            id="inputText"
-            placeholder="Type or paste your prompt here. Supports large prompts; token counts update as you type."
-          ></textarea>
-
-          <div class="hint">
-            <div>
-              <span>Tip: This is counting <span class="muted-strong">raw tokens</span> for the text above.</span>
-            </div>
-            <div>
-              <span>Tokenizer: </span>
-              <code>js‑tiktoken</code>
-            </div>
-          </div>
-          <div id="inputMessage" class="message"></div>
         </div>
+
+        <div class="input-toolbar">
+          <div class="input-toolbar-left">
+            <span>Raw text only</span>
+            <span class="separator-dot"></span>
+            <span>Chat wrappers not included</span>
+          </div>
+          <div class="input-toolbar-right">
+            <button class="btn" id="pasteBtn" type="button">
+              <span class="icon">📋</span>
+              <span>Paste</span>
+            </button>
+            <button class="btn btn-ghost" id="clearBtn" type="button">
+              <span class="icon">✕</span>
+              <span>Clear</span>
+            </button>
+          </div>
+        </div>
+
+        <textarea
+          id="inputText"
+          placeholder="Type or paste your prompt here. Supports large prompts; token counts update as you type."
+        ></textarea>
+
+        <div class="hint">
+          <span>Tip: This counts <span class="muted-strong">raw tokens</span> for the text above.</span>
+          <span>Tokenizer: <code>js‑tiktoken</code></span>
+        </div>
+        <div id="inputMessage" class="message"></div>
       </section>
 
       <!-- Right: Stats -->
       <section class="section-card">
-        <div class="section-card-inner">
-          <div class="stats-main-card">
-            <div class="stats-main-card-inner">
-              <div class="stats-main-top">
-                <div class="model-select-group">
-                  <div class="label-small">Primary model</div>
-                  <div class="model-select-wrapper">
-                    <select id="primaryModel">
-                      <!-- Options populated via JS -->
-                    </select>
-                    <span class="select-chevron">▾</span>
-                  </div>
-                </div>
-                <div class="primary-metric">
-                  <div class="primary-metric-label">Tokens (text only)</div>
-                  <div class="primary-metric-value" id="primaryTokens">0</div>
-                  <div class="primary-metric-sub" id="primaryModelLabel">
-                    —
-                  </div>
+        <div class="stats-main-card">
+          <div class="stats-main-card-inner">
+            <div class="stats-main-top">
+              <div class="model-select-group">
+                <div class="label-small">Primary Model</div>
+                <div class="model-select-wrapper">
+                  <select id="primaryModel">
+                    <!-- Options populated via JS -->
+                  </select>
+                  <span class="select-chevron">▾</span>
                 </div>
               </div>
-              <div class="stats-main-bottom">
-                <div class="stat-chip-row">
-                  <div class="stat-chip">
-                    <span class="stat-chip-key">Chars</span>
-                    <span class="stat-chip-value" id="charCount">0</span>
-                  </div>
-                  <div class="stat-chip">
-                    <span class="stat-chip-key">Words</span>
-                    <span class="stat-chip-value" id="wordCount">0</span>
-                  </div>
+              <div class="primary-metric">
+                <div class="primary-metric-label">Tokens (text only)</div>
+                <div class="primary-metric-value" id="primaryTokens">0</div>
+                <div class="primary-metric-sub" id="primaryModelLabel">—</div>
+              </div>
+            </div>
+            <div class="stats-main-bottom">
+              <div class="stat-chip-row">
+                <div class="stat-chip">
+                  <span class="stat-chip-key">Chars</span>
+                  <span class="stat-chip-value" id="charCount">0</span>
                 </div>
-                <div class="hint-soft">
-                  Chat APIs add a small per‑message overhead that is
-                  <strong>not included</strong> here.
+                <div class="stat-chip">
+                  <span class="stat-chip-key">Words</span>
+                  <span class="stat-chip-value" id="wordCount">0</span>
                 </div>
+              </div>
+              <div class="hint-soft">
+                Chat APIs add a small per‑message overhead that is
+                <strong>not included</strong> here.
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="stats-grid">
-            <div class="encoding-card">
-              <div class="encoding-card-header">
-                <div class="encoding-card-header-title">
-                  Token counts by encoding
-                </div>
-                <div class="small-pill">
-                  <span style="width:6px;height:6px;border-radius:999px;background:#22c55e;"></span>
-                  <span>Multi‑model view</span>
-                </div>
-              </div>
-              <div class="encoding-card-body">
-                <table id="encodingTable">
-                  <thead>
-                    <tr>
-                      <th>Encoding / Models</th>
-                      <th>Count</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Rows populated via JS -->
-                  </tbody>
-                </table>
+        <div class="stats-grid">
+          <div class="encoding-card">
+            <div class="encoding-card-header">
+              <div class="encoding-card-header-title">Token counts by encoding</div>
+              <div class="small-pill">
+                <span class="dot"></span>
+                <span>Multi‑model view</span>
               </div>
             </div>
+            <div class="encoding-card-body">
+              <table id="encodingTable">
+                <thead>
+                  <tr>
+                    <th>Encoding / Models</th>
+                    <th style="text-align:right">Count</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-            <div class="tokens-card">
-              <div class="tokens-card-header">
-                <div class="tokens-card-header-title">
-                  Token view (primary model)
-                </div>
-                <div class="small-pill" id="tokenViewInfo">
-                  up to 512 tokens visualized
-                </div>
-              </div>
-              <div class="tokens-body" id="tokenInspector">
-                <p class="muted">
-                  Start typing on the left to see how the selected model breaks your text
-                  into tokens. For very long prompts, this view is disabled to keep the
-                  browser happy.
-                </p>
-              </div>
+          <div class="tokens-card">
+            <div class="tokens-card-header">
+              <div class="tokens-card-header-title">Token view (primary model)</div>
+              <div class="small-pill" id="tokenViewInfo">up to 512 tokens visualized</div>
+            </div>
+            <div class="tokens-body" id="tokenInspector">
+              <p class="muted">
+                Start typing on the left to see how the selected model breaks your text
+                into tokens. For very long prompts, this view is disabled to keep the
+                browser responsive.
+              </p>
             </div>
           </div>
         </div>
@@ -981,15 +929,11 @@
     </main>
 
     <footer>
-      <div>
-        <span>Counts are approximate for GPT‑compatible models using the selected encoding.</span>
-      </div>
-      <div>
-        <span>Library: </span>
-        <a href="https://www.npmjs.com/package/js-tiktoken" target="_blank" rel="noreferrer">
-          js‑tiktoken
-        </a>
-      </div>
+      <span>Counts are approximate for GPT‑compatible models using the selected encoding.</span>
+      <span>
+        Library:
+        <a href="https://www.npmjs.com/package/js-tiktoken" target="_blank" rel="noreferrer">js‑tiktoken</a>
+      </span>
     </footer>
   </div>
 
